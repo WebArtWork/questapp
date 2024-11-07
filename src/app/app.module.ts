@@ -73,6 +73,19 @@ const routes: Routes = [
 					import('./modules/quest/pages/quests/quests.module').then(
 						(m) => m.QuestModule
 					)
+			},
+			{
+				path: 'missions',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Missions'
+					}
+				},
+				loadChildren: () =>
+					import('./modules/questmission/pages/missions/missions.module').then(
+						(m) => m.QuestmissionModule
+					)
 			}
 		]
 	},
