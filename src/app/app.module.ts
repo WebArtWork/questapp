@@ -86,6 +86,19 @@ const routes: Routes = [
 					import('./modules/questmission/pages/missions/missions.module').then(
 						(m) => m.QuestmissionModule
 					)
+			},
+			{
+				path: 'achievements',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Achievements'
+					}
+				},
+				loadChildren: () =>
+					import('./modules/questachievement/pages/achievements/achievements.module').then(
+						(m) => m.QuestachievementModule
+					)
 			}
 		]
 	},

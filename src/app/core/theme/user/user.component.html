@@ -106,8 +106,18 @@
 					class="nav__burger-link"
 					(click)="hideSidebar()"
 				>
-					<span class="material-icons">target</span>
+					<span class="material-icons">flag</span>
 					<span translate>Theme.Missions</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/achievements"
+					class="nav__burger-link"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">emoji_events</span>
+					<span translate>Theme.Achievements</span>
 				</a>
 				<hr  />
 			</div>
