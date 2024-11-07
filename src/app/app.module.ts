@@ -60,6 +60,19 @@ const routes: Routes = [
 					import('./pages/user/profile/profile.module').then(
 						(m) => m.ProfileModule
 					)
+			},
+			{
+				path: 'quests',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Quests'
+					}
+				},
+				loadChildren: () =>
+					import('./modules/quest/pages/quests/quests.module').then(
+						(m) => m.QuestModule
+					)
 			}
 		]
 	},
